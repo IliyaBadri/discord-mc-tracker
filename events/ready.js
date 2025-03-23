@@ -10,20 +10,6 @@ let statusIndex = 0;
  * @param {Client} client 
  */
 async function updateStatus(client) {
-	minecraft.ping({
-        host: config.server_ip,
-        port: config.server_port,
-    }, async (error, response) => {
-        if (error) {
-            return;
-        }
-
-		statuses = [
-			{ type: ActivityType.Playing, text: `${config.server_ip}:${config.server_port}`},
-			{ type: ActivityType.Watching, text: `${response.players.online} Players` }
-		];
-    });
-	
 	if(statusIndex > statuses.length - 1){
 		return;
 	}
@@ -42,12 +28,34 @@ async function updateStatus(client) {
     statusIndex = (statusIndex + 1) % statuses.length;
 }
 
+async function updateServer() {
+	minecraft.ping({
+        host: config.server_ip,
+        port: config.server_port,
+    }, async (error, response) => {
+        if (error) {
+            return;
+        }
+
+		statuses = [
+			{ type: ActivityType.Playing, text: `${config.server_ip}:${config.server_port}`},
+			{ type: ActivityType.Watching, text: `${response.players.online} Players` }
+		];
+    });
+}
+
 /**
  * 
  * @param {Client} client 
  */
 async function execute(client){
 	console.log(`Ready! Logged in as ${client.user.tag}`);
+	await updateServer();
+	await updateStatus();
+	setInterval(() => {
+        updateServer();
+    }, 15000);
+	
     setInterval(() => {
         updateStatus(client);
     }, 5000);
