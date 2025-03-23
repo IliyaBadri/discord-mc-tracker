@@ -10,16 +10,14 @@
     "type": "git",
     "url": "git+https://github.com/IliyaBadri/discord-mc-tracker.git"
   },
-  "keywords": [
-    "minecraft",
-    "discord",
-    "discord-bot",
-    "discord-js"
-  ],
   "author": "IliyaBadri",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/IliyaBadri/discord-mc-tracker/issues"
   },
-  "homepage": "https://github.com/IliyaBadri/discord-mc-tracker#readme"
+  "homepage": "https://github.com/IliyaBadri/discord-mc-tracker#readme",
+  "dependencies": {
+    "discord.js": "^14.18.0",
+    "dotenv": "^16.4.7"
+  }
 }
