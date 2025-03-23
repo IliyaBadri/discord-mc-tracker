@@ -1,0 +1,25 @@
+{
+  "name": "discord-mc-tracker",
+  "version": "1.0.0",
+  "description": "A minecraft server tracker discord bot.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IliyaBadri/discord-mc-tracker.git"
+  },
+  "keywords": [
+    "minecraft",
+    "discord",
+    "discord-bot",
+    "discord-js"
+  ],
+  "author": "IliyaBadri",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IliyaBadri/discord-mc-tracker/issues"
+  },
+  "homepage": "https://github.com/IliyaBadri/discord-mc-tracker#readme"
+}
