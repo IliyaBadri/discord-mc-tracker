@@ -1,8 +1,8 @@
 const { SlashCommandBuilder, BaseInteraction } = require('discord.js');
 
 const slashCommand = new SlashCommandBuilder();
-slashCommand.setName('ping')
-slashCommand.setDescription('Replies with Pong!')
+slashCommand.setName('status')
+slashCommand.setDescription('Gets the minecraft server status.')
 
 /**
  * 

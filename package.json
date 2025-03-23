@@ -18,6 +18,7 @@
   "homepage": "https://github.com/IliyaBadri/discord-mc-tracker#readme",
   "dependencies": {
     "discord.js": "^14.18.0",
-    "dotenv": "^16.4.7"
+    "dotenv": "^16.4.7",
+    "minecraft-server-status": "^1.0.1"
   }
 }
